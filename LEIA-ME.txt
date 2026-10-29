@@ -1,0 +1,64 @@
+PENINHA — conversa ao vivo entre dois computadores
+===================================================
+(antigo "Recados")
+
+O QUE TEM NESTA PASTA
+  Peninha.exe      -> o programa, pronto para usar
+  LEIA-ME.txt      -> este arquivo
+  codigo\          -> só é necessário para gerar o Peninha.exe de novo
+     peninha.py       (o código do programa)
+     gerar_exe.bat    (monta o Peninha.exe)
+     imagens\         (ícone e desenhos das animações, vão dentro do .exe)
+     icone\           (gerar_icone.py: desenha o ícone e as imagens)
+
+GERAR O PROGRAMA (só se precisar refazer o Peninha.exe)
+1. Abra a pasta "codigo" e dê dois cliques em gerar_exe.bat.
+   (Se o PC não tiver Python, o próprio .bat baixa e instala sozinho.)
+2. Quando terminar, o Peninha.exe novo aparece aqui, fora da pasta "codigo".
+   Para mudar o desenho da Peninha: edite icone\gerar_icone.py, rode
+   "python gerar_icone.py" dentro da pasta icone e gere o .exe de novo.
+
+USAR
+1. Copie o Peninha.exe para os dois computadores (pendrive, e-mail...).
+   O outro computador NÃO precisa ter Python.
+2. Abra o Peninha.exe nos dois.
+3. Na primeira vez ele pede:
+     - Seu nome  -> cada um coloca o seu
+     - Sala      -> a MESMA nos dois (ex.: escritorio)
+     - Senha     -> a MESMA nos dois (mínimo 6 caracteres)
+4. Pronto. Enter envia, Shift+Enter pula linha.
+   O outro vê o texto enquanto você digita.
+   Mensagem nova com a janela minimizada: apita e pisca na barra de tarefas.
+
+A PENINHA (o mascote)
+Ela fica ao lado da caixa de texto: pisca, olha em volta, fica de olho no
+que você escreve, dá um pulinho quando você envia, leva um susto quando
+chega mensagem e cochila (zZ) se ninguém mexer por 2 minutos.
+Clique nela para cutucar. Se a janela ficar pequena, ela sai de cena.
+
+MENU "EXIBIR"
+- Aumentar / diminuir a letra: Ctrl + / Ctrl - / Ctrl 0 (ou Ctrl + rodinha)
+- Modo claro / modo escuro
+- Mostrar a Peninha (liga/desliga o mascote)
+- Animação de abertura (liga/desliga; um clique na abertura também pula)
+A janela pode ter qualquer tamanho: tudo se ajusta, e ela abre do jeito
+que você deixou da última vez.
+
+DICAS
+- Primeira vez que abrir, o Windows pode mostrar "O Windows protegeu o
+  computador". Clique em "Mais informações" -> "Executar assim mesmo".
+  Isso acontece com qualquer programa feito em casa, sem assinatura digital.
+- Para abrir junto com o Windows: aperte Win+R, digite shell:startup,
+  e coloque um atalho do Peninha.exe nessa pasta.
+- As configurações e o histórico ficam em %APPDATA%\Peninha
+  (quem usava o Recados: na primeira abertura a pasta antiga
+  %APPDATA%\Recados é renomeada para Peninha, com tudo dentro).
+- O Peninha conversa normalmente com quem ainda está no Recados antigo
+  (mesma sala e senha), mas vale atualizar os dois.
+- Menu "Opções" permite trocar nome, trocar sala/senha e apagar o histórico.
+
+COMO FUNCIONA (para curiosos)
+As mensagens passam por um servidor público gratuito (broker.hivemq.com),
+mas vão criptografadas com a senha de vocês. Sem a senha, ninguém lê.
+Se um computador estava desligado, quando abrir ele busca no outro as
+mensagens que perdeu (desde que o outro esteja com o Peninha aberto).

@@ -1,0 +1,12 @@
+# Executáveis (publicar em Releases)
+*.exe
+
+# PyInstaller
+build/
+dist/
+*.spec
+build.log
+
+# Python
+__pycache__/
+*.pyc
